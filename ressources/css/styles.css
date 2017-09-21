@@ -1,0 +1,233 @@
+/******************** header **********************/
+
+/*ist eine flexbox mit space between. damit log und menu getrennt sind*/
+header{
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: bold;
+  height: 80px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  /*border: solid 1px red;*/
+  /*make the header fixed*/
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+  top: 0px;
+  /*left: 0px;*/
+}
+
+
+/*ist ebenfalls eine flexbox, damit bild und schrift zusammen sind*/
+.container_logo{
+  display: inline-flex;
+  align-items: flex-start;
+  align-content: center;
+}
+
+/*bild und schrift sind flex-items vom container_logo*/
+header.logo{
+  display: inline-flex;
+}
+
+header p{
+  display: inline-flex;
+  color: MediumAquamarine;
+  padding: 7px 0px 0px 7px;
+}
+
+/*flexitem vom header*/
+header.container_nav{
+  display: inline-flex;
+}
+
+ul {
+    list-style-type: none; /* Remove list bullets */
+}
+
+ul li{
+  display: inline-block;
+  padding: 20px;
+}
+
+a{
+  color: black;
+}
+
+/**********************body******************/
+
+.content{
+  /*due to fixed header:*/
+  position: relative;
+  top: 80px;
+  z-index: 0;
+  /*border: 1px solid green;*/
+}
+
+.column{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-direction: row;
+}
+
+.inner_column{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-direction: row;
+    width: 630px;
+}
+
+.large {
+  display: inline-flex;
+  flex-direction: column;
+  width: 630px;
+  padding: 10px;
+  /*border: solid 1px red;*/
+}
+
+.medium {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 300px;
+  /*border: solid 1px red;*/
+}
+
+.small {
+  display: inline-flex;
+  flex-direction: column;
+  width: 240px;
+  padding: 10px;
+  /*border: solid 1px red;*/
+}
+
+.image_container{
+  display: flex;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#story_main{
+  background-image: url("../images/img-story-main.png");
+}
+
+#story_1{
+  background-image: url("../images/img-story-1.png");
+}
+
+#story_2{
+  background-image: url("../images/img-story-2.png");
+}
+
+#story_3{
+  background-image: url("../images/img-story-3.png");
+}
+
+
+h1.image_title{
+  display: inline-flex;
+  font-family: Georgia;
+  /*font-weight: bold; h1 is bold by default*/
+  font-size: 30px;
+  color: white;
+}
+
+#large_fonts{
+  font-size: 40px;
+}
+
+
+#news_bites{
+  height: 240px;
+}
+
+p.news_bites{
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.bite_container{
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: yellow;
+  /*border: 1px solid red;*/
+  width: 240px;
+}
+
+.bite_item{
+  display: inline-flex;
+  flex-basis: max-content;
+  background-color: WhiteSmoke;
+  color: DimGray;
+  margin: 0px;
+  width: 200px;
+
+  border-bottom: 1px solid black;
+  /*border-top: 1px solid black;*/
+}
+
+p.bite_item{
+  font-family: Verdana;
+  font-size: 12px;
+  padding: 20px;
+}
+
+/************************************ footer ***********************************/
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: MediumAquamarine;
+  margin: auto;
+  font-family: Verdana;
+  font-size: 12px;
+  height: 300px;
+  width: 100%;
+  /*left: 30px;*/
+}
+
+/*why does it not work to write footer.container_row???*/
+.container_row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  /*border: 1px solid yellow;*/
+}
+
+.container_slogan{
+  display: inline-flex;
+  /*border: 1px solid green;*/
+}
+
+ p.slogan{
+  /*border: 1px solid blue;*/
+  font-family: Georgia;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+.container_nav{
+  display: inline-flex;
+  /*border: 1px solid yellow;*/
+}
+
+footer p.copyright{
+  /*border: 1px solid red;*/
+  display: inline-flex;
+}
